@@ -1,4 +1,4 @@
-# 🎓 Quantum vs Classical Classifier — Mini Quantum Machine Learning Project
+# 🎓 Quantum vs Classical Classifier — Quantum Machine Learning Project
 
 ### 🧠 Overview
 This project compares a **Variational Quantum Classifier (VQC)** built with **Qiskit Machine Learning** to a **classical Logistic Regression** model from **scikit-learn**, using a synthetic circular dataset to test performance on a non-linear classification task.  
