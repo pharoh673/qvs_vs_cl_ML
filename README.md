@@ -47,28 +47,6 @@ The **Variational Quantum Classifier (VQC)** consistently outperformed the **cla
 Quantum circuits leverage **quantum feature maps** and **entanglement** to embed data into higher-dimensional quantum state spaces, enabling the model to capture complex non-linear structures that classical models cannot.
 
 ---
-
-## 📊 Example Comparison Plot
-
-```python
-import matplotlib.pyplot as plt
-
-models = ["Classical (LogReg)", "Quantum (VQC)"]
-accuracies = [0.394, 0.706]
-
-plt.figure(figsize=(6,4))
-bars = plt.bar(models, accuracies, color=["#d95f02", "#1b9e77"], alpha=0.8)
-plt.ylim(0.3, 0.85)
-plt.ylabel("Accuracy")
-plt.title("Classical vs Quantum Classifier Accuracy")
-
-for bar, acc in zip(bars, accuracies):
-    plt.text(bar.get_x() + bar.get_width()/2, acc + 0.02, f"{acc:.3f}", 
-             ha="center", fontsize=11)
-plt.grid(axis="y", linestyle="--", alpha=0.5)
-plt.show()
-
-
 Installation
 
 1️⃣ Create a virtual environment
@@ -97,4 +75,28 @@ Quantum Machine Learning (QML) bridges quantum physics and data science, showing
 
 Farhad Amanollahi
 Graduate Student in Quantum Physics • Exploring Quantum Machine Learning
+
+
+
+## 📊 Example Comparison Plot
+
+```python
+import matplotlib.pyplot as plt
+
+models = ["Classical (LogReg)", "Quantum (VQC)"]
+accuracies = [0.394, 0.706]
+
+plt.figure(figsize=(6,4))
+bars = plt.bar(models, accuracies, color=["#d95f02", "#1b9e77"], alpha=0.8)
+plt.ylim(0.3, 0.85)
+plt.ylabel("Accuracy")
+plt.title("Classical vs Quantum Classifier Accuracy")
+
+for bar, acc in zip(bars, accuracies):
+    plt.text(bar.get_x() + bar.get_width()/2, acc + 0.02, f"{acc:.3f}", 
+             ha="center", fontsize=11)
+plt.grid(axis="y", linestyle="--", alpha=0.5)
+plt.show()
+
+##
 
