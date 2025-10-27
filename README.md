@@ -67,3 +67,34 @@ for bar, acc in zip(bars, accuracies):
              ha="center", fontsize=11)
 plt.grid(axis="y", linestyle="--", alpha=0.5)
 plt.show()
+
+
+Installation
+
+1️⃣ Create a virtual environment
+python -m venv qml_env
+2️⃣ Activate it
+
+Windows: qml_env\Scripts\activate
+
+macOS / Linux: source qml_env/bin/activate
+3️⃣ Install dependencies
+pip install jupyterlab numpy matplotlib seaborn scikit-learn
+pip install qiskit qiskit-aer qiskit-machine-learning qiskit-algorithms
+
+4️⃣ Launch Jupyter
+jupyter lab
+
+🧠 Key Takeaways
+
+Quantum models naturally handle non-linear and entangled relationships in data.
+
+Even a 2-qubit VQC can outperform classical baselines on simple datasets.
+
+Quantum Machine Learning (QML) bridges quantum physics and data science, showing early signs of computational advantage.
+
+👨‍💻 Author
+
+Farhad Amanollahi
+Graduate Student in Quantum Physics • Exploring Quantum Machine Learning
+
