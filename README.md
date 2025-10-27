@@ -1,51 +1,56 @@
-🎓 Quantum vs Classical Classifier — Mini QML Project
-🧠 Overview
+# 🎓 Quantum vs Classical Classifier — Mini Quantum Machine Learning Project
 
-This project compares a Variational Quantum Classifier (VQC) built with Qiskit Machine Learning to a classical Logistic Regression model from scikit-learn, using synthetic circular data to test performance on a non-linear classification task.
-The goal was to understand how quantum feature mapping and entanglement can outperform linear classical models on complex boundaries.
+### 🧠 Overview
+This project compares a **Variational Quantum Classifier (VQC)** built with **Qiskit Machine Learning** to a **classical Logistic Regression** model from **scikit-learn**, using a synthetic circular dataset to test performance on a non-linear classification task.  
+The goal was to explore how **quantum feature mapping and entanglement** can outperform classical linear models in detecting non-linear patterns.
 
-⚗️ Project Objectives
+---
 
-Build and train a VQC using quantum circuits (feature map + ansatz).
+## ⚗️ Project Objectives
+- Build and train a **VQC** using quantum circuits (feature map + ansatz).  
+- Compare it with a **classical baseline** (Logistic Regression).  
+- Visualize decision boundaries and performance results.  
+- Gain practical experience with **Quantum Machine Learning (QML)** using Qiskit.
 
-Compare against a classical baseline trained on the same dataset.
+---
 
-Visualize decision boundaries and accuracies for both.
+## 🧩 Dataset
+Two synthetic datasets were generated and used:
 
-Learn practical steps in Quantum Machine Learning (QML) using Qiskit.
+| Dataset | Description | Classical Accuracy | Quantum Accuracy |
+|----------|--------------|--------------------|------------------|
+| **Unbalanced** | Circle with 39% positive samples | 0.600 | 0.675 |
+| **Balanced** | 50/50 class distribution | 0.394 | 0.706 |
 
-🧩 Dataset
+Each dataset consisted of 2D points labeled based on whether they fall inside or outside a circle, creating a **non-linear** decision boundary — a task where quantum models shine.
 
-Two synthetic datasets were generated:
+---
 
-Unbalanced Dataset: circle with 39% positive samples
+## ⚙️ Technologies Used
+| Category | Libraries / Tools |
+|-----------|------------------|
+| **Quantum ML** | Qiskit, Qiskit Aer, Qiskit Machine Learning, Qiskit Algorithms |
+| **Classical ML** | Scikit-learn |
+| **Visualization** | Matplotlib, Seaborn |
+| **Environment** | Python 3.10+, JupyterLab |
 
-Classical accuracy: 0.60
+---
 
-Quantum accuracy: 0.675
+## 📈 Results
+The **Variational Quantum Classifier (VQC)** consistently outperformed the **classical Logistic Regression** baseline.
 
-Balanced Dataset: 50/50 class distribution
+| Dataset | Classical (LogReg) | Quantum (VQC) |
+|----------|--------------------|---------------|
+| Unbalanced | 0.60 | 0.675 |
+| Balanced | 0.394 | 0.706 |
 
-Classical accuracy: 0.394
+Quantum circuits leverage **quantum feature maps** and **entanglement** to embed data into higher-dimensional quantum state spaces, enabling the model to capture complex non-linear structures that classical models cannot.
 
-Quantum accuracy: 0.706
+---
 
-Each dataset contained 2D points labeled by whether they fall inside or outside a circle — a classic non-linear boundary problem.
+## 📊 Example Comparison Plot
 
-⚙️ Technologies Used
-Category	Libraries / Tools
-Quantum ML	Qiskit, Qiskit Aer, Qiskit Machine Learning, Qiskit Algorithms
-Classical ML	Scikit-learn
-Visualization	Matplotlib, Seaborn
-Environment	Python 3.10+, JupyterLab
-Results
-
-The Variational Quantum Classifier (VQC) consistently outperformed the classical Logistic Regression baseline:
-
-Dataset	Classical (LogReg)	Quantum (VQC)
-Unbalanced	0.60	0.675
-Balanced	0.394	0.706
-
+```python
 import matplotlib.pyplot as plt
 
 models = ["Classical (LogReg)", "Quantum (VQC)"]
@@ -58,24 +63,7 @@ plt.ylabel("Accuracy")
 plt.title("Classical vs Quantum Classifier Accuracy")
 
 for bar, acc in zip(bars, accuracies):
-    plt.text(bar.get_x() + bar.get_width()/2, acc + 0.02, f"{acc:.3f}", ha="center", fontsize=11)
+    plt.text(bar.get_x() + bar.get_width()/2, acc + 0.02, f"{acc:.3f}", 
+             ha="center", fontsize=11)
 plt.grid(axis="y", linestyle="--", alpha=0.5)
 plt.show()
-
-python -m venv qml_env
-source qml_env/bin/activate  # (Windows: qml_env\Scripts\activate)
-pip install jupyterlab numpy matplotlib seaborn scikit-learn
-pip install qiskit qiskit-aer qiskit-machine-learning qiskit-algorithms
-
-Key Takeaways
-
-Quantum models excel when data has non-linear, entangled relationships.
-
-Even a 2-qubit VQC can outperform classical baselines on small datasets.
-
-QML offers a bridge between quantum physics and data science, demonstrating real computational advantages in expressive modeling.
-
-Author
-
-Farhad Amanollahi
-Graduate Student in Quantum Physics | Exploring Machine Learning Applications
